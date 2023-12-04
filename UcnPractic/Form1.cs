@@ -32,9 +32,7 @@ namespace UcnPractic
                 labelС.Visible = true;
                 labelEquals.Visible = true;
                 labelAnswer.Visible = true;
-
                 // Скрыть поля для ввода и вывода, если выбран другой RadioButton
-                // (предположим, что textBox3 и textBox4 - другие поля для ввода и вывода)
                 textBox3.Visible = false;
                 textBox4.Visible = false;
                 textBox5.Visible = false;
@@ -61,9 +59,7 @@ namespace UcnPractic
                 labelEquals.Visible = true;
                 labelAnswer.Visible = true;
                 labelA.Visible = true;
-
                 // Скрыть поля для ввода и вывода, если выбран другой RadioButton
-                // (предположим, что textBox3 и textBox4 - другие поля для ввода и вывода)
                 textBox1.Visible = false;
                 textBox2.Visible = false;
                 textBox5.Visible = false;
@@ -88,9 +84,7 @@ namespace UcnPractic
                 labelEquals.Visible = true;
                 labelAnswer.Visible = true;
                 labelP.Visible = true;
-
                 // Скрыть поля для ввода и вывода, если выбран другой RadioButton
-                // (предположим, что textBox3 и textBox4 - другие поля для ввода и вывода)
                 textBox1.Visible = false;
                 textBox2.Visible = false;
                 textBox3.Visible = false;
@@ -149,6 +143,7 @@ namespace UcnPractic
                 ClearFields();
             }
         }
+
         // Метод для вычисления C
         private double CalculateC(int n, int m)
         {
@@ -162,7 +157,6 @@ namespace UcnPractic
         }
 
         // Метод для вычисления факториала числа
-
         private double Factorial(int num)
         {
             double factorial = 1;
@@ -172,6 +166,7 @@ namespace UcnPractic
             }
             return factorial;
         }
+
         // Метод для вычисления P
         private double CalculateP(int num)
         {
@@ -182,6 +177,7 @@ namespace UcnPractic
             }
             return factorial;   
         }
+
         private void ClearFields()
         {
             textBox1.Text = "";
