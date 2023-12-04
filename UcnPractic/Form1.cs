@@ -19,6 +19,7 @@ namespace UcnPractic
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
+            //Присвоение labelAnswer значение ?
             labelAnswer.Text = "?";
             if (radioButton1.Checked)
             {
@@ -46,6 +47,7 @@ namespace UcnPractic
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
+            //Присвоение labelAnswer значение ?
             labelAnswer.Text = "?";
             if (radioButton2.Checked)
             {
@@ -74,6 +76,7 @@ namespace UcnPractic
 
         private void radioButton3_CheckedChanged(object sender, EventArgs e)
         {
+            //Присвоение labelAnswer значение ?
             labelAnswer.Text = "?";
             if (radioButton3.Checked)
             {
@@ -131,6 +134,7 @@ namespace UcnPractic
             }
             else if (radioButton3.Checked)
             {
+                //Расчет P при выборе третьего RadioButton
                 if (int.TryParse(textBox5.Text, out int n))
                 {
                     double result = CalculateP(n);
@@ -177,7 +181,7 @@ namespace UcnPractic
             }
             return factorial;   
         }
-
+        //Очистка textBox
         private void ClearFields()
         {
             textBox1.Text = "";
@@ -186,7 +190,7 @@ namespace UcnPractic
             textBox4.Text = "";
             textBox5.Text = "";
         }
-
+        //Проверка вводимых чисел
         private void textBox5_TextChanged(object sender, EventArgs e)
         {
             if (!int.TryParse(textBox5.Text, out int number))
@@ -199,7 +203,7 @@ namespace UcnPractic
                 textBox5.Text = "";
             }
         }
-
+        //Проверка вводимых чисел
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             if (!int.TryParse(textBox1.Text, out int number))
@@ -212,7 +216,7 @@ namespace UcnPractic
                 textBox1.Text = "";
             }
         }
-
+        //Проверка вводимых чисел
         private void textBox4_TextChanged(object sender, EventArgs e)
         {
             if (!int.TryParse(textBox4.Text, out int number))
@@ -225,7 +229,7 @@ namespace UcnPractic
                 textBox4.Text = "";
             }
         }
-
+        //Проверка вводимых чисел
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
             if (!int.TryParse(textBox3.Text, out int number))
@@ -238,7 +242,7 @@ namespace UcnPractic
                 textBox3.Text = "";
             }
         }
-
+        //Проверка вводимых чисел
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
             if (!int.TryParse(textBox2.Text, out int number))
