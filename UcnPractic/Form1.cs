@@ -19,7 +19,7 @@ namespace UcnPractic
 
         private void Calculation_Click(object sender, EventArgs e)
         {
-            double a = double.Parse(textBoxA.Text);
+            double a = double.Parse(textBoxA.Text); 
             double b = double.Parse(textBoxB.Text);
             double c = double.Parse(textBoxC.Text);
             double x = double.Parse(textBoxX.Text);
