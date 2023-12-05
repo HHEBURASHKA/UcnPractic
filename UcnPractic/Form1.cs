@@ -27,7 +27,7 @@ namespace UcnPractic
             double z = double.Parse(textBoxZ.Text);
             double Xmin = double.Parse(textBoxXmin.Text);
             double Xmax = double.Parse(textBoxXmax.Text);
-            double Step = double.Parse(textBoxStep.Text);
+            double Step = double.Parse(textBoxStep.Text); 
             //количество точек графика
             int count = (int)Math.Ceiling((Xmax - Xmin) / Step)
                 + 1;
