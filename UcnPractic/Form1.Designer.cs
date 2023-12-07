@@ -43,21 +43,26 @@
             this.BoxKlass = new System.Windows.Forms.ComboBox();
             this.BoxChildren = new System.Windows.Forms.ComboBox();
             this.txtData = new System.Windows.Forms.MaskedTextBox();
-            this.txtStart = new System.Windows.Forms.TextBox();
-            this.txtFinish = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.List = new System.Windows.Forms.CheckedListBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.Proverka = new System.Windows.Forms.ListBox();
+            this.checkedList = new System.Windows.Forms.CheckedListBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.comboReis = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.button3 = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label1.Location = new System.Drawing.Point(29, 24);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(175, 29);
@@ -74,7 +79,9 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label2.Location = new System.Drawing.Point(31, 80);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(69, 16);
@@ -84,7 +91,9 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label3.Location = new System.Drawing.Point(31, 133);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(73, 16);
@@ -94,7 +103,9 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label4.Location = new System.Drawing.Point(31, 106);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(36, 16);
@@ -118,7 +129,9 @@
             // lblName
             // 
             this.lblName.AutoSize = true;
+            this.lblName.BackColor = System.Drawing.Color.Transparent;
             this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblName.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblName.Location = new System.Drawing.Point(31, 159);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(70, 16);
@@ -136,7 +149,9 @@
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label6.Location = new System.Drawing.Point(31, 185);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(42, 16);
@@ -160,7 +175,7 @@
             "Первый класс"});
             this.BoxKlass.Location = new System.Drawing.Point(273, 106);
             this.BoxKlass.Name = "BoxKlass";
-            this.BoxKlass.Size = new System.Drawing.Size(121, 21);
+            this.BoxKlass.Size = new System.Drawing.Size(159, 21);
             this.BoxKlass.TabIndex = 14;
             // 
             // BoxChildren
@@ -171,7 +186,7 @@
             "С детьми"});
             this.BoxChildren.Location = new System.Drawing.Point(273, 75);
             this.BoxChildren.Name = "BoxChildren";
-            this.BoxChildren.Size = new System.Drawing.Size(121, 21);
+            this.BoxChildren.Size = new System.Drawing.Size(159, 21);
             this.BoxChildren.TabIndex = 15;
             this.BoxChildren.SelectedIndexChanged += new System.EventHandler(this.BoxChildren_SelectedIndexChanged);
             // 
@@ -184,103 +199,131 @@
             this.txtData.TabIndex = 16;
             this.txtData.ValidatingType = typeof(System.DateTime);
             // 
-            // txtStart
+            // checkedList
             // 
-            this.txtStart.Location = new System.Drawing.Point(290, 374);
-            this.txtStart.Name = "txtStart";
-            this.txtStart.Size = new System.Drawing.Size(140, 20);
-            this.txtStart.TabIndex = 17;
-            // 
-            // txtFinish
-            // 
-            this.txtFinish.Location = new System.Drawing.Point(102, 374);
-            this.txtFinish.Name = "txtFinish";
-            this.txtFinish.Size = new System.Drawing.Size(140, 20);
-            this.txtFinish.TabIndex = 18;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.Location = new System.Drawing.Point(242, 375);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(42, 16);
-            this.label5.TabIndex = 19;
-            this.label5.Text = "Куда:";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label7.Location = new System.Drawing.Point(31, 375);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(58, 16);
-            this.label7.TabIndex = 20;
-            this.label7.Text = "Откуда:";
-            // 
-            // List
-            // 
-            this.List.FormattingEnabled = true;
-            this.List.Items.AddRange(new object[] {
+            this.checkedList.FormattingEnabled = true;
+            this.checkedList.Items.AddRange(new object[] {
             "Багаж",
-            "Питание",
             "Обратный билет"});
-            this.List.Location = new System.Drawing.Point(273, 132);
-            this.List.Name = "List";
-            this.List.Size = new System.Drawing.Size(120, 49);
-            this.List.TabIndex = 24;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label8.Location = new System.Drawing.Point(270, 187);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(125, 16);
-            this.label8.TabIndex = 25;
-            this.label8.Text = "Проверка билета:";
-            // 
-            // Proverka
-            // 
-            this.Proverka.FormattingEnabled = true;
-            this.Proverka.Location = new System.Drawing.Point(273, 208);
-            this.Proverka.Name = "Proverka";
-            this.Proverka.Size = new System.Drawing.Size(157, 160);
-            this.Proverka.TabIndex = 27;
+            this.checkedList.Location = new System.Drawing.Point(273, 135);
+            this.checkedList.Name = "checkedList";
+            this.checkedList.Size = new System.Drawing.Size(159, 34);
+            this.checkedList.TabIndex = 24;
             // 
             // button1
             // 
             this.button1.AutoSize = true;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(379, 398);
+            this.button1.Location = new System.Drawing.Point(381, 328);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(51, 40);
             this.button1.TabIndex = 28;
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(448, 73);
+            this.button2.AutoSize = true;
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.Location = new System.Drawing.Point(211, 24);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.Size = new System.Drawing.Size(221, 39);
             this.button2.TabIndex = 29;
-            this.button2.Text = "button2";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // comboReis
+            // 
+            this.comboReis.FormattingEnabled = true;
+            this.comboReis.Items.AddRange(new object[] {
+            "Москва --> Санкт-Петербург",
+            "Москва --> Красноярск",
+            "Москва --> Екатеренбург",
+            "Москва --> Краснодар",
+            "Москва --> Новосибирск"});
+            this.comboReis.Location = new System.Drawing.Point(273, 206);
+            this.comboReis.Name = "comboReis";
+            this.comboReis.Size = new System.Drawing.Size(159, 21);
+            this.comboReis.TabIndex = 45;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label5.Location = new System.Drawing.Point(272, 184);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(94, 16);
+            this.label5.TabIndex = 46;
+            this.label5.Text = "Выбор рейса:";
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Location = new System.Drawing.Point(271, 297);
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(120, 20);
+            this.numericUpDown1.TabIndex = 47;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label7.Location = new System.Drawing.Point(270, 278);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(166, 16);
+            this.label7.TabIndex = 48;
+            this.label7.Text = "Кол-во детских билетов:";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label8.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label8.Location = new System.Drawing.Point(271, 230);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(177, 16);
+            this.label8.TabIndex = 50;
+            this.label8.Text = "Кол-во взрослых билетов:";
+            // 
+            // numericUpDown2
+            // 
+            this.numericUpDown2.Location = new System.Drawing.Point(272, 249);
+            this.numericUpDown2.Name = "numericUpDown2";
+            this.numericUpDown2.Size = new System.Drawing.Size(120, 20);
+            this.numericUpDown2.TabIndex = 49;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.Transparent;
+            this.button3.Location = new System.Drawing.Point(307, 328);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(68, 40);
+            this.button3.TabIndex = 51;
+            this.button3.Text = "Обновить";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(551, 450);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(452, 384);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.numericUpDown2);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.comboReis);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.Proverka);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.List);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.txtFinish);
-            this.Controls.Add(this.txtStart);
+            this.Controls.Add(this.checkedList);
             this.Controls.Add(this.txtData);
             this.Controls.Add(this.BoxChildren);
             this.Controls.Add(this.BoxKlass);
@@ -295,8 +338,13 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtFam);
             this.Controls.Add(this.label1);
+            this.DoubleBuffered = true;
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Name = "Form1";
             this.Text = "Авиасейлс";
+            this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -318,15 +366,16 @@
         private System.Windows.Forms.ComboBox BoxKlass;
         private System.Windows.Forms.ComboBox BoxChildren;
         private System.Windows.Forms.MaskedTextBox txtData;
-        private System.Windows.Forms.TextBox txtStart;
-        private System.Windows.Forms.TextBox txtFinish;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.CheckedListBox List;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ListBox Proverka;
+        private System.Windows.Forms.CheckedListBox checkedList;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.ComboBox comboReis;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.NumericUpDown numericUpDown2;
+        private System.Windows.Forms.Button button3;
     }
 }
 
